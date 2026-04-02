@@ -1,19 +1,69 @@
 /* Task 1: Style the body */
 body {
-    /* insert code here */
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #f4f4f4;
 }
 
 /* Task 2: Create a pseudo-element for the background and blur */
 body::before {
-    /* insert code here */
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* You can replace this URL with a specific gift-related image if desired */
+    background: url('https://images.unsplash.com/photo-1549465220-1a8b9238cd48?q=80&w=2040&auto=format&fit=crop') no-repeat center center/cover;
+    filter: blur(8px);
+    z-index: -1;
 }
 
 /* Task 3: Style the content area */
 .content {
-    /* insert code here */
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #333;
+    max-width: 800px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white for readability */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Task 4: Add styles for headings, paragraphs, and buttons */
-h1, h2, .lead, .btn-primary {
-    /* insert code here */
+h1 {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+h2 {
+    font-weight: 400;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+.lead {
+    font-style: italic;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-radius: 50px; /* Rounded pill-style button */
+    transition: transform 0.2s;
+}
+
+.btn-primary:hover {
+    transform: scale(1.05);
 }
