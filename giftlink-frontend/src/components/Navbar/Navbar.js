@@ -1,20 +1,31 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link for SPA navigation
 
 export default function Navbar() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="/">GiftLink</a>
+        <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+            <Link className="navbar-brand" to="/">GiftLink</Link>
+
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span className="navbar-toggler-icon"></span>
+            </button>
 
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
-                    {/* Task 1: Add links to Home and Gifts below*/}
+                    {/* Task 1: Links to Home and Gifts */}
                     <li className="nav-item">
-                        <a className="nav-link" href="/home.html">Home</a> {/* Link to home.html */}
+                        <Link className="nav-link" to="/">Home</Link>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" href="/app">Gifts</a> {/* Updated Link to MainPage */}
+                        <Link className="nav-link" to="/app">Gifts</Link>
+                    </li>
+                    
+                    {/* Task 2: Add the Search link here */}
+                    <li className="nav-item">
+                        <Link className="nav-link" to="/app/search">Search</Link>
                     </li>
                 </ul>
+
             </div>
         </nav>
     );
